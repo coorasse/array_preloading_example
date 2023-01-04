@@ -5,8 +5,4 @@ You cannot use `preload` on an array of objects and therefore you suffer of N+1 
 
 Imagine we have a Restaurants list. The Restaurants are fetched from a remote Service and therefore we have a simple array of objects.
 
-In our system we have tables for `Table` and `Menu` and they reference the `Restaurant` by `external_restaurant_id`.
-
-This is the setup, there might be a lot of reasons why you cannot cache the restaurants locally of course.
-
-```ruby
+In this simple rails application, we DEMO what has been described in this article on dev.to: https://dev.to/coorasse/preloading-associations-on-an-array-of-objects-4d81

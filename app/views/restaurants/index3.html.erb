@@ -4,7 +4,7 @@
     <hr>
     <h5>Customers list</h5>
     <ul>
-    <% Customer.where(external_restaurant_code: restaurant.code).each do |customer| %>
+    <% restaurant.customers.each do |customer| %>
       <li><%= customer.name %></li>
     <% end %>
     </ul>
