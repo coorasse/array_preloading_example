@@ -1,0 +1,12 @@
+<% @restaurants.each do |restaurant| %>
+  <article>
+    <h2><%= restaurant.name %></h2>
+    <hr>
+    <h5>Customers list</h5>
+    <ul>
+    <% Customer.where(external_restaurant_id: restaurant.id).each do |customer| %>
+      <li><%= customer.name %></li>
+    <% end %>
+    </ul>
+  </article>
+<% end %>
